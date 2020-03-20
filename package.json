@@ -1,0 +1,22 @@
+{
+  "name": "mini-app",
+  "version": "1.0.0",
+  "description": "Tp NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Breahkd46/mini-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Breahkd46/mini-app/issues"
+  },
+  "homepage": "https://github.com/Breahkd46/mini-app#readme"
+}
