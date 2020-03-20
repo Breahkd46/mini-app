@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node script.js data.csv"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pug": "2.0.4"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
