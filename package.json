@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js data.csv"
+    "start": "node server.js data.csv",
+    "start-dev": "nodemon ./server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "2.0.4"
+    "pug": "2.0.4",
+    "uuid": "7.0.2",
+    "body-parser": "1.19.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "2.0.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Breahkd46/mini-app.git"
