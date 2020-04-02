@@ -1,0 +1,7 @@
+html 
+body
+    form(action="/city", method="PUT")
+        label(for="name") Nom
+        input#name(type="text", name="name" value=city.name)
+        input(type="hidden", name="id" value=city._id)
+        button(type="submit", id="submit") Valider

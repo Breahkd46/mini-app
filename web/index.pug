@@ -1,0 +1,11 @@
+html(lang="fr")
+  head
+    title Voici le contenu du fichier
+  body
+    h1 Voici le contenu du fichier
+    table
+        each city in cities
+            tr
+                td= city.name
+                td
+                  a(href="modifyCity/" + city._id) modify

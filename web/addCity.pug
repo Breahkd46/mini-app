@@ -1,0 +1,11 @@
+html
+body
+    
+    h1 Ajouter une ville
+
+    form(action="city", method="post")
+        label(for="name") Nom
+        input#name(type="text", name="name")
+        button(type="submit", id="submit") Valider
+    div#message
+//- script(src='ajax.js')
