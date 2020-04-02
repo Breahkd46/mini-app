@@ -7,5 +7,37 @@ html(lang="fr")
         each city in cities
             tr
                 td= city.name
-                td
-                  a(href="modifyCity/" + city._id) modify
+
+    h1 Ajouter une ville
+
+    form(action="city", method="post")
+        label(for="name") Nom
+        input#name(type="text", name="name")
+        button(type="submit") Valider
+    div#message
+
+    h1 Modifier une ville
+    form(action="/city", method="PUT")
+        label(for="name") Nom
+        select
+          each city in cities
+            option(value=city.id)= city.name
+        input#nameModify(type="text")
+    button#button(type="submit") Valider
+  script.
+    var sendPutCity = function() {
+      const cityId = document.querySelector('select').selectedOptions[0].value;
+      console.log(document.getElementById('nameModify'));
+      const name = document.getElementById('nameModify').value;
+      console.log(name);
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && (xhttp.status == 200 || xhttp.status == 0)) {
+          document.location.reload();
+        }
+      };
+      xhttp.open("PUT", "city/" + cityId);
+      xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xhttp.send(JSON.stringify({name: name}));
+    }
+    document.getElementById('button').onclick = sendPutCity;
